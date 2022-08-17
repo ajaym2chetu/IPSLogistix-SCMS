@@ -1,0 +1,37 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: Test@123
+
+development:
+  <<: *default
+  database: ips_database
+
+# test:
+#   <<: *default
+#   database: dmiweb_test
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8mb4
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: azureuser
+#   password: Mypickups18$!*
+#   socket: /var/run/mysqld/mysqld.sock
+
+# development:
+#   <<: *default
+#   database: api_app_development
+
+
+# test:
+#   <<: *default
+#   database: api_app_test
+
+
+# production:
+#   <<: *default
+#   database: api_app_production
+#   username: api_app
+#   password: <%= ENV['API_APP_DATABASE_PASSWORD'] %>
